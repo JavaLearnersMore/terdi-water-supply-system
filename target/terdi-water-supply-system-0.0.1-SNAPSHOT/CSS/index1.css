@@ -1,0 +1,214 @@
+/* General body styling */
+body {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Padding utility class */
+.p-0 {
+  padding: 0;
+}
+
+/* Box with border */
+.codevoc-b2b .box {
+  border: 1px solid #ccc;
+  border-radius: .25rem !important;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+/* Button styling */
+.codevoc-b2b .btn-colored {
+  display: flex;
+  align-items: center;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+
+/* Button hover effect */
+.codevoc-b2b .b2b-action-btn a:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Highlight section background */
+.codevoc-b2b .highlighet-section {
+  background: rgba(0, 0, 0, .05);
+}
+
+/* Table row hover effect */
+.codevoc-b2b table tr:hover {
+  background: #ecf5e7;
+  transition: background-color 1s ease-out;
+}
+
+/* Top navigation bar */
+.topnav {
+  background-color: rgb(0, 0, 139); /* Dark blue */
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(0, 0, 139); /* Dark blue text on hover */
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Sidebar styling */
+.sidebar {
+  height: calc(100% - 50px);
+  width: 200px;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  background-color: #111;
+  padding-top: 20px;
+  z-index: 99;
+}
+
+.sidebar a {
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+  color: #f1f1f1;
+}
+
+/* Content styling */
+.content {
+  margin-left: 200px; /* Sidebar width */
+  padding: 20px;
+  margin-top: 20px; /* Space for topnav */
+  width: calc(100% - 220px); /* Adjust content width */
+  box-sizing: border-box;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Operation link styling */
+.operation-link a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.operation-link a:hover {
+  text-decoration: underline;
+}
+
+/* Logout button */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logout-button {
+  background-color: rgb(192, 192, 192); /* Gray */
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.logout-button:hover {
+  background-color: rgb(160, 160, 160); /* Darker gray on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 150px;
+  }
+  .content {
+    margin-left: 170px;
+    width: calc(100% - 170px);
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+/* Scrolling marquee */
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+

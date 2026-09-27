@@ -1,0 +1,90 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #3498db; /* Main background color */
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.card {
+  background-color: #fff; /* Card background color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000; /* Text color on the card */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Title text color */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  color: #333; /* Label text color */
+}
+
+input, select {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #3498db; /* Input border color */
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+  outline: none; /* Remove outline on focus */
+}
+
+input:focus, select:focus {
+  border-color: #2980b9; /* Input border color when focused */
+}
+
+button {
+  background-color: #2980b9; /* Button background color */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #2c3e50; /* Button background color on hover */
+}
+
+.create-account {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.create-account button {
+  background-color: #3498db; /* Button for create account */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.create-account button:hover {
+  background-color: #2c3e50; /* Button hover for create account */
+}
+
+p {
+  text-align: center;
+  color: #333;
+  margin: 10px 0;
+}
