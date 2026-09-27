@@ -16,27 +16,32 @@ body {
 /* Main Page */
 
 .page-container {
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     padding: 25px;
 }
 
 
-/* Registration Card */
+/* Login Card */
 
-.registration-card {
+.login-card {
+
     width: 100%;
-    max-width: 850px;
+
+    max-width: 480px;
 
     background: white;
 
     border-radius: 12px;
 
-    padding: 30px 40px;
+    padding: 35px 40px;
 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
 }
@@ -44,13 +49,15 @@ body {
 
 /* Header */
 
-.registration-header {
+.login-header {
+
     text-align: center;
 
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-.registration-header h2 {
+.login-header h2 {
+
     color: #0066a1;
 
     font-size: 28px;
@@ -58,24 +65,11 @@ body {
     margin-bottom: 8px;
 }
 
-.registration-header p {
+.login-header p {
+
     color: #777;
 
     font-size: 14px;
-}
-
-
-/* Form Grid */
-
-.form-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    column-gap: 25px;
-
-    row-gap: 16px;
 }
 
 
@@ -86,17 +80,12 @@ body {
     display: flex;
 
     flex-direction: column;
+
+    margin-bottom: 20px;
 }
 
 
-/* Full Width */
-
-.full-width {
-    grid-column: span 2;
-}
-
-
-/* Labels */
+/* Label */
 
 .form-group label {
 
@@ -104,20 +93,19 @@ body {
 
     font-weight: bold;
 
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 
     color: #333;
 }
 
 
-/* Inputs */
+/* Input */
 
-.form-group input,
-.form-group select {
+.form-group input {
 
     width: 100%;
 
-    height: 42px;
+    height: 44px;
 
     padding: 0 12px;
 
@@ -135,10 +123,9 @@ body {
 }
 
 
-/* Focus */
+/* Input Focus */
 
-.form-group input:focus,
-.form-group select:focus {
+.form-group input:focus {
 
     border-color: #0066a1;
 
@@ -162,7 +149,7 @@ body {
 
 .button-container button {
 
-    width: 150px;
+    width: 140px;
 
     height: 42px;
 
@@ -180,22 +167,22 @@ body {
 }
 
 
-/* Register */
+/* Login Button */
 
-.submit-btn {
+.login-btn {
 
     background: #0066a1;
 
     color: white;
 }
 
-.submit-btn:hover {
+.login-btn:hover {
 
     background: #004d78;
 }
 
 
-/* Cancel */
+/* Cancel Button */
 
 .cancel-btn {
 
@@ -210,37 +197,83 @@ body {
 }
 
 
+/* Registration Section */
+
+.register-section {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+.register-section p {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Create Account */
+
+.register-btn {
+
+    background: transparent;
+
+    border: 1px solid #0066a1;
+
+    color: #0066a1;
+
+    padding: 9px 25px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.register-btn:hover {
+
+    background: #0066a1;
+
+    color: white;
+}
+
+
 /* Mobile */
 
-@media (max-width: 650px) {
+@media (max-width: 500px) {
 
     .page-container {
 
-        align-items: flex-start;
-
         padding: 15px;
+
+        align-items: flex-start;
     }
 
-    .registration-card {
+    .login-card {
 
-        padding: 25px 20px;
-    }
-
-    .form-grid {
-
-        grid-template-columns: 1fr;
+        padding: 30px 20px;
 
     }
 
-    .full-width {
-
-        grid-column: span 1;
-
-    }
-
-    .registration-header h2 {
+    .login-header h2 {
 
         font-size: 24px;
+
     }
 
     .button-container {
@@ -248,11 +281,13 @@ body {
         flex-direction: column;
 
         align-items: center;
+
     }
 
     .button-container button {
 
         width: 100%;
+
     }
 
 }

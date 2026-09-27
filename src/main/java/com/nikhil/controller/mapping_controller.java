@@ -20,10 +20,10 @@ public class mapping_controller {
 	@Autowired
 	private users_service service;
 	
-	@RequestMapping(value="/welcome" , method = RequestMethod.GET)
-	public ModelAndView welcomePage() {
+	@RequestMapping(value="/" , method = RequestMethod.GET)
+	public ModelAndView GetWelcomePage() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("Welcome");
+		mav.setViewName("welcome");
 		return mav;
 		
 	}

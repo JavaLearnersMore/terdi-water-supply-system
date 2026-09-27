@@ -53,12 +53,12 @@ public class users_controller {
 			if(b.getRole().equalsIgnoreCase("User")) {
 				//List<MembersBO> list = service.getMember();
 				mav.addObject("userId", b.getId());
-				mav.setViewName("index2");
+				mav.setViewName("userLogin");
 			}
 			else if(b.getRole().equalsIgnoreCase("Admin")) {
 				List<MembersBO> list = service.getMember();
 				mav.addObject("memberDetails", list);
-				mav.setViewName("index1");
+				mav.setViewName("adminLogin");
 			}
 			else {
 				mav.setViewName("loginError");

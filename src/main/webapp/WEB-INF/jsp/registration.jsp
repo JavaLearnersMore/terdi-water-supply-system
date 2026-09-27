@@ -1,164 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+
+    <title>Registration - Terdi Water Supply Scheme</title>
+
     <!-- jQuery UI CSS -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet"
+          href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- jQuery UI -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/CSS/home.css">
+
+    <!-- Registration CSS -->
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/CSS/registration.css">
+
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="card">
-            <!-- Registration Form with Header -->
+<div class="page-container">
+
+    <div class="registration-card">
+
+        <!-- Header -->
+
+        <div class="registration-header">
+
             <h2>Create Account</h2>
 
-            <!-- Form Section -->
-            <form id="registrationForm" action="registerUser" method="post" name="frm">
-                <!-- Role Field -->
-                <label for="role"><b>Role</b></label>
-                <select id="role" name="role" required>
-				    <option value="" disabled selected>Select a role</option>
-				    <option value="user">User</option>
-				    <option value="admin">Admin</option>
-				</select><br>
+            <p>
+                Register for Terdi Water Supply Scheme
+            </p>
 
-                <!-- First Name Field -->
-                <label for="f_name"><b>First Name</b></label>
-                <input type="text" id="f_name" name="first_name" placeholder="First Name" required>
-                
-                <!-- Middle Name Field -->
-                <label for="m_name"><b>Middle Name</b></label>
-                <input type="text" id="m_name" name="middle_name" placeholder="Middle Name" required> 
-
-                <!-- Last Name Field -->
-                <label for="l_name"><b>Last Name</b></label>
-                <input type="text" id="l_name" name="last_name" placeholder="Last Name" required>
-
-                <!-- Password Field -->
-                <label for="password"><b>Password</b></label>
-                <input type="password" id="password" name="password" placeholder="Password" required>
-
-                <!-- Date of Birth Field -->
-                <label for="dob"><b>Date of Birth</b></label>
-                <input type="text" id="dob" name="dob" placeholder="Date of Birth" required>
-
-                <!-- Address Field -->
-                <label for="address"><b>Address</b></label>
-                <input type="text" id="address" name="address" placeholder="Address" required>
-
-                <!-- Email Address Field -->
-                <label for="email_id"><b>Email Address</b></label>
-                <input type="text" id="email_id" name="email_id" placeholder="Email ID" required>
-
-                <!-- Mobile Number Field -->
-                <label for="mob_number"><b>Mobile Number</b></label>
-                <input type="number" id="mob_number" name="mobile_number" placeholder="Mobile Number" required>
-
-                <!-- Submit Button -->
-                <button type="button" onclick="submitForm()">Submit</button>
-            </form>
-
-            <!-- Or Login Section -->
-            <p style="text-align:center;">or</p>
-            
-              <div class="create-account-btn-container">
-                <button onclick="history.back()">Cancel</button>
-            </div>
-              
         </div>
+
+
+        <!-- Registration Form -->
+
+        <form id="registrationForm"
+              action="registerUser"
+              method="post"
+              name="frm">
+
+            <div class="form-grid">
+
+                <!-- Role -->
+
+                <div class="form-group">
+
+                    <label for="role">
+                        Role
+                    </label>
+
+                    <select id="role"
+                            name="role"
+                            required>
+
+                        <option value="" disabled selected>
+                            Select Role
+                        </option>
+
+                        <option value="user">
+                            User
+                        </option>
+
+                        <option value="admin">
+                            Admin
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           placeholder="Enter password"
+                           required>
+
+                </div>
+
+
+                <!-- First Name -->
+
+                <div class="form-group">
+
+                    <label for="f_name">
+                        First Name
+                    </label>
+
+                    <input type="text"
+                           id="f_name"
+                           name="first_name"
+                           placeholder="Enter first name"
+                           required>
+
+                </div>
+
+
+                <!-- Middle Name -->
+
+                <div class="form-group">
+
+                    <label for="m_name">
+                        Middle Name
+                    </label>
+
+                    <input type="text"
+                           id="m_name"
+                           name="middle_name"
+                           placeholder="Enter middle name"
+                           required>
+
+                </div>
+
+
+                <!-- Last Name -->
+
+                <div class="form-group">
+
+                    <label for="l_name">
+                        Last Name
+                    </label>
+
+                    <input type="text"
+                           id="l_name"
+                           name="last_name"
+                           placeholder="Enter last name"
+                           required>
+
+                </div>
+
+
+                <!-- Date of Birth -->
+
+                <div class="form-group">
+
+                    <label for="dob">
+                        Date of Birth
+                    </label>
+
+                    <input type="text"
+                           id="dob"
+                           name="dob"
+                           placeholder="Select date of birth"
+                           readonly
+                           required>
+
+                </div>
+
+
+                <!-- Address -->
+
+                <div class="form-group full-width">
+
+                    <label for="address">
+                        Address
+                    </label>
+
+                    <input type="text"
+                           id="address"
+                           name="address"
+                           placeholder="Enter address"
+                           required>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email_id">
+                        Email Address
+                    </label>
+
+                    <input type="email"
+                           id="email_id"
+                           name="email_id"
+                           placeholder="Enter email address"
+                           required>
+
+                </div>
+
+
+                <!-- Mobile -->
+
+                <div class="form-group">
+
+                    <label for="mob_number">
+                        Mobile Number
+                    </label>
+
+                    <input type="tel"
+                           id="mob_number"
+                           name="mobile_number"
+                           placeholder="Enter mobile number"
+                           maxlength="10"
+                           required>
+
+                </div>
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="button-container">
+
+                <button type="button"
+                        class="submit-btn"
+                        onclick="submitForm()">
+
+                    Register
+
+                </button>
+
+                <button type="button"
+                        class="cancel-btn"
+                        onclick="history.back()">
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </form>
+
     </div>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            // Prevent typing in the datepicker input
-            $("#dob").on('keydown', function(e) {
-                e.preventDefault();
-            });
-            
-            // Ensure that the datepicker stays open when clicking inside the input field
-            $("#dob").on('focus', function() {
-                $(this).blur();
-            });
+</div>
 
-            // Initialize datepicker
-            $("#dob").datepicker({
-                changeMonth: true,
-                changeYear: true,
-                yearRange: "-100:+0",
-                dateFormat: "mm/dd/yy",
-                maxDate: new Date()
-            });
 
-            // Apply regex validation to both First Name and Last Name fields
-            $("#f_name,#m_name, #l_name").keypress(function(event) {
-                var regex = new RegExp(/[a-zA-Z\s-]/);
-                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-                if (!regex.test(key)) {
-                    event.preventDefault(); // Prevent invalid characters
-                    return false;
-                }
-            });
-        });
-        
-        // Reset border color when user interacts with the field
-        $("#role, #f_name, #m_name, #l_name, #password, #dob, #address, #email_id, #mob_number").on('input', function() {
-            $(this).css("border-color", "#3498db");
-        });
+<script>
 
-        function validateForm() {
-        	debugger
-            var isValid = true; // Track overall form validity
+$(document).ready(function () {
 
-            // Fields to validate
-            var fields = {
-                fName: $("#f_name"),
-                mName: $("#m_name"),
-                lName: $("#l_name"),
-                password: $("#password"),
-                dob: $("#dob"),
-                address: $("#address"),
-                email: $("#email_id"),
-                mobNumber: $("#mob_number")
-            };
-            
-            // Check role field specifically
-            if (($("#role").val() === "") || ($("#role").val() === null)) {
-                $("#role").css("border-color", "red");
-                isValid = false;
-            } else {
-                $("#role").css("border-color", "#3498db");
-            }
+    /* Date Picker */
 
-            // Iterate over each field to check if it's empty
-            $.each(fields, function (key, field) {
-                if (field.val() === "" || field.val() === null) {
-                    // If the field is empty, show an alert and make the border red
-                    field.css("border-color", "red");
-                    isValid = false; // Form is not valid
-                    return false; // Break loop once the first invalid field is found
-                } else {
-                    // If the field is filled, reset the border color
-                    field.css("border-color", "#3498db");
-                }
-            });
+    $("#dob").datepicker({
 
-            return isValid; // Only submit if all fields are valid
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-100:+0",
+        dateFormat: "mm/dd/yy",
+        maxDate: new Date()
+
+    });
+
+
+    /* Name validation */
+
+    $("#f_name, #m_name, #l_name").keypress(function (event) {
+
+        var regex = new RegExp(/[a-zA-Z\s-]/);
+
+        var key = String.fromCharCode(
+            !event.charCode ? event.which : event.charCode
+        );
+
+        if (!regex.test(key)) {
+
+            event.preventDefault();
+
+            return false;
         }
 
-        function submitForm() {
-            if (validateForm()) {
-                // Submit the form if validation passes
-                $("#registrationForm").submit();
-            }
+    });
+
+
+    /* Mobile number validation */
+
+    $("#mob_number").keypress(function (event) {
+
+        var key = String.fromCharCode(
+            !event.charCode ? event.which : event.charCode
+        );
+
+        if (!/[0-9]/.test(key)) {
+
+            event.preventDefault();
+
+            return false;
         }
-    </script>
+
+    });
+
+
+    /* Reset border when user enters data */
+
+    $("#role, #f_name, #m_name, #l_name, #password, #dob, #address, #email_id, #mob_number")
+        .on("input change", function () {
+
+            $(this).css("border-color", "#d5dce5");
+
+        });
+
+});
+
+
+function validateForm() {
+
+    var isValid = true;
+
+    var fields = {
+
+        role: $("#role"),
+        fName: $("#f_name"),
+        mName: $("#m_name"),
+        lName: $("#l_name"),
+        password: $("#password"),
+        dob: $("#dob"),
+        address: $("#address"),
+        email: $("#email_id"),
+        mobNumber: $("#mob_number")
+
+    };
+
+
+    $.each(fields, function (key, field) {
+
+        if (field.val() === "" || field.val() === null) {
+
+            field.css("border-color", "#e74c3c");
+
+            isValid = false;
+
+        } else {
+
+            field.css("border-color", "#d5dce5");
+
+        }
+
+    });
+
+
+    return isValid;
+}
+
+
+function submitForm() {
+
+    if (validateForm()) {
+
+        $("#registrationForm").submit();
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>

@@ -1,0 +1,178 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f8fb;
+    color: #333;
+}
+
+/* Header */
+
+.header {
+    height: 70px;
+    background: #0066a1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.register-btn {
+    background: white;
+    color: #0066a1 !important;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        rgba(0, 102, 161, 0.90),
+        rgba(0, 150, 190, 0.80)
+    );
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 14px 35px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.login-btn {
+    background: white;
+    color: #0066a1;
+}
+
+.registration-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+
+/* About */
+
+.about {
+    padding: 50px 80px;
+    text-align: center;
+    background: white;
+}
+
+.about h2 {
+    color: #0066a1;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.about p {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #004d78;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .header nav {
+        gap: 5px;
+    }
+
+    .header nav a {
+        padding: 8px 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about {
+        padding: 40px 25px;
+    }
+}
