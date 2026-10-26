@@ -14,7 +14,6 @@ import com.nikhil.beans.PaymentDetailsBO;
 import com.nikhil.service.users_service;
 
 @Controller
-@ResponseBody
 public class mapping_controller {
 	
 	@Autowired
