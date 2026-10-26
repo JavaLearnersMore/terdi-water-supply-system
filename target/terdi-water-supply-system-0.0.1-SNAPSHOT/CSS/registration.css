@@ -1,90 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #3498db; /* Main background color */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f8fb;
+    color: #333;
+    min-height: 100vh;
 }
 
-.container {
-  width: 100%;
-  max-width: 400px;
+
+/* Main Page */
+
+.page-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
 }
 
-.card {
-  background-color: #fff; /* Card background color */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #000; /* Text color on the card */
+
+/* Registration Card */
+
+.registration-card {
+    width: 100%;
+    max-width: 850px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 30px 40px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333; /* Title text color */
+
+/* Header */
+
+.registration-header {
+    text-align: center;
+
+    margin-bottom: 25px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+.registration-header h2 {
+    color: #0066a1;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
 }
 
-label {
-  margin-bottom: 6px;
-  color: #333; /* Label text color */
+.registration-header p {
+    color: #777;
+
+    font-size: 14px;
 }
 
-input, select {
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #3498db; /* Input border color */
-  border-radius: 4px;
-  transition: border-color 0.3s ease-in-out;
-  outline: none; /* Remove outline on focus */
+
+/* Form Grid */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 25px;
+
+    row-gap: 16px;
 }
 
-input:focus, select:focus {
-  border-color: #2980b9; /* Input border color when focused */
+
+/* Form Group */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
 }
 
-button {
-  background-color: #2980b9; /* Button background color */
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+
+/* Full Width */
+
+.full-width {
+    grid-column: span 2;
 }
 
-button:hover {
-  background-color: #2c3e50; /* Button background color on hover */
+
+/* Labels */
+
+.form-group label {
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+
+    color: #333;
 }
 
-.create-account {
-  margin-top: 20px;
-  text-align: center;
+
+/* Inputs */
+
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d5dce5;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    background: white;
+
+    transition: 0.2s;
 }
 
-.create-account button {
-  background-color: #3498db; /* Button for create account */
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+
+/* Focus */
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #0066a1;
+
+    box-shadow: 0 0 0 2px rgba(0, 102, 161, 0.10);
 }
 
-.create-account button:hover {
-  background-color: #2c3e50; /* Button hover for create account */
+
+/* Buttons */
+
+.button-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 28px;
 }
 
-p {
-  text-align: center;
-  color: #333;
-  margin: 10px 0;
+
+.button-container button {
+
+    width: 150px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Register */
+
+.submit-btn {
+
+    background: #0066a1;
+
+    color: white;
+}
+
+.submit-btn:hover {
+
+    background: #004d78;
+}
+
+
+/* Cancel */
+
+.cancel-btn {
+
+    background: #e8edf2;
+
+    color: #333;
+}
+
+.cancel-btn:hover {
+
+    background: #d8dee5;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .page-container {
+
+        align-items: flex-start;
+
+        padding: 15px;
+    }
+
+    .registration-card {
+
+        padding: 25px 20px;
+    }
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .full-width {
+
+        grid-column: span 1;
+
+    }
+
+    .registration-header h2 {
+
+        font-size: 24px;
+    }
+
+    .button-container {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .button-container button {
+
+        width: 100%;
+    }
+
 }
