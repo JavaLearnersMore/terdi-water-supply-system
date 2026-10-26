@@ -22,7 +22,7 @@ public class mapping_controller {
 	@RequestMapping(value="/" , method = RequestMethod.GET)
 	public ModelAndView GetWelcomePage() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("welcome");
+		mav.setViewName("terdi");
 		return mav;
 		
 	}
